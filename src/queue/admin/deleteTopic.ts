@@ -7,8 +7,8 @@ export const deleteTopic = async (topicName: string) => {
         await admin.deleteTopics({
             topics: [topicName]
         })
-    } catch (error : any) {
-        console.log(error?.message)
+    } catch (error) {
+        console.log(error)
     }
     await admin.disconnect()
 } 
