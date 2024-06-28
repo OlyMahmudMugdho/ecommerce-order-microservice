@@ -24,6 +24,14 @@ export type Order = {
     cartId?: string
 }
 
+export type OrderResponse = {
+    ok?: boolean;
+    success?: boolean;
+    error?: boolean;
+    message: string;
+    data?: string
+}
+
 export type Hello = {
     ok: boolean;
     message: string;
