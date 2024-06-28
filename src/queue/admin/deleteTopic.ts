@@ -3,8 +3,12 @@ import { admin } from "./admin"
 
 export const deleteTopic = async (topicName: string) => {
     await admin.connect()
-    await admin.deleteTopics({
-        topics: [topicName]
-    })
+    try {
+        await admin.deleteTopics({
+            topics: [topicName]
+        })
+    } catch (error) {
+        console.log(error)
+    }
     await admin.disconnect()
 } 
