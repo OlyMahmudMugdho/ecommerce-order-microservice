@@ -17,6 +17,13 @@ export type Item = {
     price: number;
 }
 
+export type Product = {
+    items: Item[];
+    subtotal: number;
+    userId: string;
+    cartId?: string
+}
+
 export type Hello = {
     ok: boolean;
     message: string;
