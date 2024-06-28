@@ -8,7 +8,7 @@ const app = express()
 app.use(morgan('combined'))
 app.use(express.json())
 
-const PORT: string | number = process.env.PORT ?? 8080;
+const PORT: string | number = process.env.PORT ?? 8082;
 
 
 app.use(router)
