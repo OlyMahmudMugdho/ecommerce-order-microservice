@@ -1,11 +1,14 @@
 import express, { Request, Response } from 'express'
 import { Hello } from './types/types';
+import { router } from './router/router';
 const app = express()
 
 app.use(express.json())
 
 const PORT: string | number = process.env.PORT ?? 8080;
 
+
+app.use(router)
 
 app.get("/", (req: Request, res: Response) => {
     const message: Hello = {

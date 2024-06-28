@@ -1,7 +1,7 @@
 import { Hello } from "../types/types"
 import { Request, Response } from "express"
 
-export const showMessage : object = (req : Request, res : Response) => {
+export const showMessage : any = (req : Request, res : Response) => {
     const message : Hello = {
         ok : true,
         message : "controller test done"
