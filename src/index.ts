@@ -22,6 +22,6 @@ app.get("/", (req: Request, res: Response) => {
 })
 
 
-app.listen(8080, () => {
+app.listen(PORT, () => {
     console.info(`server is running on port ${PORT}`)
 })
