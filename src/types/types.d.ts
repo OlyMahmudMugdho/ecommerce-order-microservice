@@ -17,7 +17,7 @@ export type Item = {
     price: number;
 }
 
-export type Product = {
+export type Order = {
     items: Item[];
     subtotal: number;
     userId: string;
