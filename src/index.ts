@@ -4,7 +4,7 @@ const app = express()
 
 app.use(express.json())
 
-const PORT: string | number = process.env.PORT || 8080;
+const PORT: string | number = process.env.PORT ?? 8080;
 
 type Hello = {
     ok: boolean;
