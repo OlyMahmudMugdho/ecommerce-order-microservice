@@ -8,5 +8,6 @@ export const produce = async (topicName: string, message: any) => {
         messages: [
             message
         ],
-    })
+    });
+    await producer.disconnect();
 }
