@@ -1,15 +1,11 @@
 import express, { Request, Response } from 'express'
-
+import { Hello } from './types/types';
 const app = express()
 
 app.use(express.json())
 
 const PORT: string | number = process.env.PORT ?? 8080;
 
-type Hello = {
-    ok: boolean;
-    message: string;
-}
 
 app.get("/", (req: Request, res: Response) => {
     const message: Hello = {
