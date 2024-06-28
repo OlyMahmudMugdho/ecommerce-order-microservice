@@ -11,6 +11,12 @@ export type Product = {
     image: string
 }
 
+export type Item = {
+    productId: string;
+    quantity: number;
+    price: number;
+}
+
 export type Hello = {
     ok: boolean;
     message: string;
