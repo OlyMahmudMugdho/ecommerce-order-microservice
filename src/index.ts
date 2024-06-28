@@ -1,11 +1,11 @@
 import express, { Request, Response } from 'express';
-import morgan from 'morgan'
+import morgan from 'morgan';
 import { Hello } from './types/types';
 import { router } from './router/router';
 
 const app = express()
 
-app.use()
+app.use(morgan('combined'))
 app.use(express.json())
 
 const PORT: string | number = process.env.PORT ?? 8080;
