@@ -11,7 +11,7 @@ export const topicExists = async (topicName: string) => {
             return true;
         }
     } catch (error) {
-        console.error(error)
+        console.log("cannot check topics")
         return true;
     }
 }
