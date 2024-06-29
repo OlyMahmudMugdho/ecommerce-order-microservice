@@ -8,7 +8,7 @@ export const produce = async (topicName: string, message: any) => {
         await producer.send({
             topic: topicName,
             messages: [
-                { key: message.userId, value: message.toString() }
+                { key: message.userId, value: JSON.stringify(message) }
             ],
         });
         await producer.disconnect();
