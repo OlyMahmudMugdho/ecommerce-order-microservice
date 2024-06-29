@@ -26,4 +26,8 @@ app.get("/", (req: Request, res: Response) => {
 
 app.listen(PORT, async () => {
     console.info(`server is running on port ${PORT}`);
+    if(await !topicExists("orders")) {
+        await createTopic("orders")
+    }
+    
 })
