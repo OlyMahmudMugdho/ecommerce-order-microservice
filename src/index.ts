@@ -4,6 +4,7 @@ import { Hello } from './types/types';
 import { router } from './router/router';
 import { topicExists } from './queue/admin/topicExists';
 import { createTopic } from './queue/admin/createTopic';
+import { consumeMessage } from './queue/consumer/consume';
 
 const app = express()
 
@@ -29,5 +30,5 @@ app.listen(PORT, async () => {
     if(await !topicExists("orders")) {
         await createTopic("orders")
     }
-    
+    await consumeMessage("orders")
 })
