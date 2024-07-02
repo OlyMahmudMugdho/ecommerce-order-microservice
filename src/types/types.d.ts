@@ -22,6 +22,7 @@ export type Order = {
     subtotal: number;
     userId: string;
     cartId?: string
+    timestamp: Date
 }
 
 export type OrderResponse = {
