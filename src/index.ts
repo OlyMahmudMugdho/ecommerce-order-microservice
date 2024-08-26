@@ -14,9 +14,7 @@ app.use(express.json())
 const PORT: string | number = process.env.PORT ?? 8084;
 
 
-app.use(router)
-
-app.get("/", (req: Request, res: Response) => {
+app.get("/order", (req: Request, res: Response) => {
     const message: Hello = {
         ok: true,
         message: "hello world"
@@ -25,9 +23,13 @@ app.get("/", (req: Request, res: Response) => {
 })
 
 
+app.use("/order", router)
+
+
+
 app.listen(PORT, async () => {
     console.info(`server is running on port ${PORT}`);
-    if(await !topicExists("orders")) {
+    if (await !topicExists("orders")) {
         await createTopic("orders")
     }
     await consumeMessage("orders")
